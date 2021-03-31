@@ -1,0 +1,479 @@
+/*
+Theme Name: Seven Elohim
+Author: Farakh Malik
+Author URI: http://fmalik.de
+Description:
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: simple, photo
+Text Domain: sevenelohim
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  font-size: 14px;
+}
+
+.logo {
+  height: 99px;
+  width: 99px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  z-index: 500;
+}
+
+#posts {
+  top: 0;
+  left: 0;
+  z-index: 450;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 502;
+}
+
+.sidebar__right {
+  top: 50vh;
+  right: 10px;
+}
+
+.sidebar__left {
+  top: 50vh;
+  left: 10px;
+}
+
+.sidebar .sidebar__link {
+  font-size: 1rem;
+  color: #2d2d2d;
+  line-height: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sidebar--active {
+  font-weight: bold;
+}
+
+/* Onur: habs auskommentiert */
+/* .main_content {
+    width: 42%;
+    margin: 140px auto;
+} */
+
+.single-project-page {
+  width: 80%;
+}
+
+.se-singlepage {
+  width: 80%;
+  display: none;
+}
+
+.projects-list {
+  width: 80%;
+  display: none;
+}
+
+.page-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.content-area {
+  position: relative;
+  float: left;
+}
+
+.archive-projects {
+}
+
+.single-project {
+  text-align: center;
+  margin: 50px 0;
+  width: 100%;
+  position: relative;
+  z-index: 500;
+}
+
+.single-project img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.single-project .single-project__caption {
+  margin-top: 10px;
+}
+
+.project-details {
+  margin: 0 auto;
+  float: left;
+}
+
+.project-details__row {
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.project-details__elem {
+  float: left;
+  width: 230px;
+  height: 130px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.project-details__elem img {
+  max-height: 130px;
+  max-width: 230px;
+}
+
+.project-details__elem p {
+  font-size: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.project-details__elem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-details--text {
+  padding: 10px;
+  background-color: #b4b4b4;
+  display: inline;
+}
+
+/* .frontpage_carousel {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+.frontpage_carousel .full-screen {
+    min-height: 100vh;
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.frontpage_carousel .full-screen:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .6);
+    cursor: pointer;
+}
+
+.frontpage_carousel footer {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 100;
+} */
+
+/**** SINGLE PAGE ****/
+
+.page-template-t_seven-elohim-page {
+  background-color: #b4b4b4;
+  float: left;
+}
+
+.logo__se_page {
+  opacity: 1;
+  position: relative;
+  float: left;
+  width: 100%;
+  left: unset;
+  top: unset;
+  margin: calc(25vh + -10px) auto 90px;
+  padding: 0;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.logo__se_page a:hover {
+  text-decoration: none;
+}
+
+.se-sp-sections {
+  clear: both;
+}
+
+.se-singlepage section {
+  margin-bottom: 80px;
+}
+
+.se-singlepage section img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.partners__single img {
+  width: 100%;
+}
+
+.partners__single {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.se-singlepage section.se-sp-sections__header {
+  margin-bottom: 18px;
+}
+
+/**** LIGHTBOX MODIFICATIONS ****/
+
+.lb-data .lb-details {
+  position: absolute;
+  bottom: 15px;
+  right: 50px;
+  text-align: right !important;
+}
+
+.lb-dataContainer {
+  position: relative;
+}
+
+.lb-nav a.lb-prev {
+  width: 33% !important;
+  background-image: url('images/icons/se-previous.svg') !important;
+  position: relative;
+  left: 24px !important;
+}
+
+.lb-nav a.lb-next {
+  width: 33% !important;
+  background-image: url('images/icons/se-next.svg') !important;
+  right: 24px !important;
+  position: relative;
+}
+
+.lb-nav .se-lb-close {
+  width: 33%;
+  float: left;
+  display: block;
+  height: 100%;
+  left: 0;
+  background: url('images/icons/se-close.svg') center 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+  cursor: pointer;
+}
+
+.lb-nav .se-lb-close:hover {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+}
+
+.lb-close {
+  display: none !important;
+}
+
+.lb-caption.light {
+  color: #fff;
+}
+
+.lb-caption.dark {
+  color: #000;
+}
+
+.single_item {
+  overflow: hidden;
+  position: relative;
+  z-index: 501;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**** MEDIA QUERIES ****/
+
+@media (min-width: 300px) {
+  .sidebar__left {
+    left: 10px;
+  }
+
+  .sidebar__right {
+    right: 10px;
+  }
+
+  .project-details__elem {
+    height: 130px;
+    max-width: 100%;
+  }
+
+  .project-details__elem img {
+    max-width: 100%;
+  }
+
+  .lb-data .lb-details {
+    right: 10px;
+  }
+
+  .single_item {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 576px) {
+  .project-details__elem img {
+    max-width: 130px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar__left {
+    left: 40px;
+  }
+
+  .sidebar__right {
+    right: 40px;
+  }
+
+  .project-details__elem {
+    height: 230px;
+    max-height: 130px;
+    max-width: 200px;
+  }
+
+  .project-details__elem img {
+    max-width: 200px;
+  }
+
+  .lb-data .lb-details {
+    right: 50px;
+  }
+
+  .single_item {
+    overflow: initial;
+  }
+
+  .projects-list {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-details__elem {
+    height: 230px;
+    max-height: 130px;
+    max-width: 230px;
+  }
+
+  .project-details__elem img {
+    max-width: 230px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-details__elem {
+    height: 230px;
+    max-height: 130px;
+    max-width: 230px;
+  }
+}
+
+/**** ANIMATIONS ****/
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 1s ease forwards;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*  Ripple */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(180, 180, 180, 0.4);
+  transform: scale(1);
+  position: fixed;
+  opacity: 1;
+  z-index: 501;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+}
+
+.rippleEffect {
+  animation: rippleDrop 0.5s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/**** VERTICAL SCROLLING ****/
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.vert .carousel-item {
+  transition-property: all;
+  transition-delay: 0s;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
